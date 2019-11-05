@@ -1,0 +1,46 @@
+{
+  "name": "npm-typescript-starter",
+  "version": "1.0.0",
+  "description": "WRITE YOUR DESCRIPTION HERE",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "test": "jest --config jestconfig.json",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "prepare": "npm run build",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsparvath/npm-typescript-starter.git"
+  },
+  "keywords": [
+    "WRITE",
+    "YOUR",
+    "KEYWORDS",
+    "HERE"
+  ],
+  "author": "jsparvath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsparvath/npm-typescript-starter/issues"
+  },
+  "homepage": "https://github.com/jsparvath/npm-typescript-starter#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^6.0.0-beta0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.4"
+  }
+}

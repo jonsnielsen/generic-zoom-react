@@ -1,6 +1,6 @@
 {
-  "name": "npm-typescript-starter",
-  "version": "1.0.0",
+  "name": "jsparvath-test-npm-typescript-starter",
+  "version": "1.0.2",
   "description": "WRITE YOUR DESCRIPTION HERE",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,11 +36,17 @@
   "homepage": "https://github.com/jsparvath/npm-typescript-starter#readme",
   "devDependencies": {
     "@types/jest": "^24.0.21",
+    "husky": "^3.0.9",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.1.0",
     "tslint": "^6.0.0-beta0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run lint && npm test"
+    }
   }
 }

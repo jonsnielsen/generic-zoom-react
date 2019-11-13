@@ -7,12 +7,12 @@
   "jsnext:main": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib"
+    "lib/**/*"
   ],
   "scripts": {
     "build": "rollup -c",
     "lint": "tslint -p tsconfig.json",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" \"src/**/*.tsx\" \"src/**/*.jsx\"",
     "test": "jest --config jestconfig.json",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
@@ -38,9 +38,16 @@
   "homepage": "https://github.com/jsparvath/npm-typescript-starter#readme",
   "devDependencies": {
     "@types/jest": "^24.0.21",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-test-renderer": "^16.9.1",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts-ts": "^3.1.0",
+    "react-test-renderer": "^16.11.0",
     "rollup": "^1.27.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -50,6 +57,10 @@
     "tslint": "^6.0.0-beta0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "husky": {
     "hooks": {

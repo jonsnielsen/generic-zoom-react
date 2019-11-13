@@ -1,14 +1,16 @@
 {
-  "name": "jsparvath-test-npm-typescript-starter",
+  "name": "generic-zoom-react",
   "version": "1.0.2",
-  "description": "WRITE YOUR DESCRIPTION HERE",
+  "description": "Medium zoom like functionality, but only transforming the container element. Suited for children that adjust automatically depending on the parent element such as gatsby-image.",
   "main": "lib/index.js",
+  "module": "lib/index.es.js",
+  "jsnext:main": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib/**/*"
+    "lib"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "lint": "tslint -p tsconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "test": "jest --config jestconfig.json",
@@ -39,6 +41,11 @@
     "husky": "^3.0.9",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "rollup": "^1.27.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-typescript2": "^0.25.2",
     "ts-jest": "^24.1.0",
     "tslint": "^6.0.0-beta0",
     "tslint-config-prettier": "^1.18.0",

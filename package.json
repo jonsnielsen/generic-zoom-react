@@ -20,6 +20,11 @@
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run lint && npm test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsparvath/npm-typescript-starter.git"
@@ -59,12 +64,7 @@
     "typescript": "^3.6.4"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format && npm run lint && npm test"
-    }
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   }
 }

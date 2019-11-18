@@ -1,4 +1,4 @@
-# A starter for writing and publishing an NPM package written in TypeScript and React
+React wrapper of generic-zoom. Medium zoom like functionality, but only transforming the container element. Suited for children that adjust automatically depending on the parent element such as gatsby-image.
 
 <!-- 1. clone repository
 2. edit README file -->

@@ -27,6 +27,11 @@
       "pre-commit": "npm run format && npm run lint && npm test"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run lint && npm test"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsparvath/generic-zoom-react.git"

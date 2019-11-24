@@ -1,4 +1,4 @@
-import React, { useState, RefObject, useEffect } from 'react';
+import React, { RefObject } from 'react';
 import { ZoomContext } from './utils/Contexts';
 
 interface IProps {
@@ -9,7 +9,7 @@ interface IProps {
 const GenericZoom: React.FC<IProps> = ({ children, isZoomed, outerElemRef }) => {
   // TODO HERE
   return (
-    <div style={{ width: 'fit-content' }}>
+    <div>
       <ZoomContext.Provider value={{ isZoomed, outerElemRef }}>{children}</ZoomContext.Provider>
     </div>
   );

@@ -14,16 +14,16 @@ const GenericZoomContent: React.FC<IGenericZoomContent> = ({
   const [zoomJS, setZoomJS] = useState<GenericZoomJS | null>(null);
   const elemToZoomWrapperRef = createRef<HTMLDivElement>();
   const elemToZoomRef = createRef<HTMLDivElement>();
+  zoomMargin.horizontal = zoomMargin.horizontal;
 
   useEffect(() => {
-    console.log(outerElemRef);
     const elemToZoom = elemToZoomRef.current;
     const elemToZoomWrapper = elemToZoomWrapperRef.current;
     const outerElem = outerElemRef && outerElemRef.current;
     if (elemToZoom && elemToZoomWrapper) {
       setZoomJS(new GenericZoomJS({ outerElem, elemToZoom, elemToZoomWrapper }));
     }
-  }, []);
+  });
 
   useEffect(() => {
     if (isZoomed && zoomJS) {
@@ -35,8 +35,14 @@ const GenericZoomContent: React.FC<IGenericZoomContent> = ({
   }, [isZoomed, zoomJS]);
 
   return (
-    <div style={baseStyle} ref={elemToZoomWrapperRef}>
-      <div style={baseStyle} ref={elemToZoomRef}>
+    <div
+      //  style={baseStyle}
+      ref={elemToZoomWrapperRef}
+    >
+      <div
+        // style={baseStyle}
+        ref={elemToZoomRef}
+      >
         {children}
         {isZoomed}
       </div>
@@ -44,9 +50,9 @@ const GenericZoomContent: React.FC<IGenericZoomContent> = ({
   );
 };
 
-const baseStyle = {
-  width: 'fit-content',
-  height: 'fit-content',
-};
+// const baseStyle = {
+//   width: 'fit-content',
+//   height: 'fit-content',
+// };
 
 export default GenericZoomContent;

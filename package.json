@@ -1,6 +1,6 @@
 {
   "name": "generic-zoom-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React wrapper of generic-zoom. Medium zoom like functionality, but only transforming the container element. Suited for children that adjust automatically depending on the parent element such as gatsby-image.",
   "main": "lib/index.js",
   "module": "lib/index.es.js",

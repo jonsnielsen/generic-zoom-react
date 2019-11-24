@@ -1,5 +1,5 @@
 import React, { useState, createRef, useEffect } from 'react';
-import GenericZoom, { GenericZoomContent } from '../';
+import GenericZoom, { GenericZoomContent, GenericZoomOverlay } from '../';
 
 export default { title: 'Button' };
 
@@ -9,6 +9,7 @@ export const genericZoomWithDefaultOuterElem = () => {
   return (
     <div>
       <GenericZoom isZoomed={isZoomed}>
+        <GenericZoomOverlay />
         <GenericZoomContent>Im generic zoom content</GenericZoomContent>
       </GenericZoom>
       <button onClick={() => setIsZoomed(prev => !prev)}>Toggle zoom</button>
